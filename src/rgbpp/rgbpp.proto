@@ -1,0 +1,17 @@
+// hero/hero.proto
+syntax = "proto3";
+
+package rgbpp;
+
+service RgbppSdkService {
+  rpc BuildRgbppLockArgs (RgbppLockParams) returns (RgbppLockArgs) {}
+}
+
+message RgbppLockParams {
+  int32 outIndex = 1;
+  string btcTxId = 2;
+}
+
+message RgbppLockArgs {
+  string args = 1;
+}
